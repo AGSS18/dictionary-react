@@ -4,6 +4,7 @@ import SearchEngine from "./SearchEngine";
 import CardTall from "./ui/CardTall";
 
 import classes from './Search.module.css';
+import Logo from "./Logo";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -14,8 +15,9 @@ function Search(props) {
 
     return(
         <CardTall>
+            <Logo />
             <SearchEngine handleSetWord={handleSetWord} />
-            <h1 className={classes.word}>{word}</h1>
+            <h2 className={classes.word}>{word}</h2>
         </CardTall>
     );
 }

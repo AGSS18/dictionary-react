@@ -1,0 +1,33 @@
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 4rem;
+}
+
+.image {
+  max-width: 12%;
+  height: fit-content;
+  margin-right: 1rem;
+}
+
+.h1 {
+  font-size: 3rem;
+  text-align: start;
+  color: #54bbdb;
+}
+
+.span {
+  display: block;
+  font-size: 1.1rem;
+}
+
+.span,
+.span a {
+  color: rgb(182, 182, 182);
+}
+
+.span a:hover {
+  color: rgb(153, 153, 153);
+}
