@@ -1,0 +1,46 @@
+.SearchEngine {
+  display: block;
+  width: 100%;
+}
+
+.form {
+  border-bottom: 1px solid rgb(199, 199, 199);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.form input {
+  margin-bottom: 0.5rem;
+  border: none;
+  width: 100%;
+  font-size: 1.5rem;
+}
+
+.form input::placeholder {
+  color: rgb(199, 199, 199);
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+.form input:focus {
+  outline: none;
+}
+
+.icon {
+  color: rgb(199, 199, 199);
+  font-size: 1.5rem;
+  margin-right: 0.6rem;
+  padding-bottom: 0.4rem;
+  background-color: transparent;
+  border: none;
+}
+
+.icon:hover {
+  cursor: pointer;
+}
+
+[type="search"]::-webkit-search-cancel-button {
+  background-color: rgb(199, 199, 199);
+  color: rgb(199, 199, 199);
+  background-image: rgb(199, 199, 199);
+}
