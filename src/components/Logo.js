@@ -5,7 +5,7 @@ function Logo() {
     return(
         <div className={classes.logo}>
             <img className={classes.image} src={logo} alt="Logo" />
-            <h1 className={classes.h1}>Dictionary <span className={classes.span}> <a href="https://github.com/AGSS18/dictionary-react" target="_blank">Open source built</a> by Ana Sala</span> </h1>
+            <h1 className={classes.h1}>Dictionary <span className={classes.span}> <a href="https://github.com/AGSS18/dictionary-react" target="_blank" rel="noreferrer">Open source built</a> by Ana Sala</span> </h1>
         </div>
     );
 }
