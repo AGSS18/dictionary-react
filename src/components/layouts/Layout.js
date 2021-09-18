@@ -1,8 +1,9 @@
-import classes from './Layout.module.css';
+import './Layout.css';
+import '../../index.css';
 
 function Layout(props) {
     return(
-        <div className={classes.layout}>
+        <div className="Layout container">
             {props.children}
         </div>
     );

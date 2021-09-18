@@ -3,10 +3,13 @@ import axios from 'axios';
 
 import SearchEngine from "./SearchEngine";
 import CardTall from "./ui/CardTall";
+import CardLarge from "./ui/CardLarge";
+import CardSmall from "./ui/CardSmall";
 
 import classes from './Search.module.css';
 import Logo from "./Logo";
 import Results from "./Results";
+import Layout from "./layouts/Layout";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -14,7 +17,7 @@ function Search(props) {
 
     function handleResponse(response) {
         setData(response.data);
-        console.log(response.data);
+        console.log(response.data[0]);
     }
 
     function handleSetWord(response) {
@@ -27,12 +30,29 @@ function Search(props) {
     }, [word]);
 
     return(
-        <CardTall>
-            <Logo />
-            <SearchEngine handleSetWord={handleSetWord} />
-            <h2 className={classes.word}>{word}</h2>
-            <Results data={data}/>
-        </CardTall>
+        <Layout>
+            <CardTall>
+                <Logo />
+                <SearchEngine handleSetWord={handleSetWord} />
+                <h2 className={classes.word}>{word}</h2>
+                <Results data={data}/>
+            </CardTall>
+            {/* <CardSmall>
+                Grammar
+            </CardSmall>
+            <CardSmall>
+                Examples
+            </CardSmall>
+            <CardLarge>
+                Images
+            </CardLarge>
+            <CardSmall>
+                Pronunciation
+            </CardSmall>
+            <CardSmall>
+                Related words
+            </CardSmall> */}
+        </Layout>
     );
 }
 
