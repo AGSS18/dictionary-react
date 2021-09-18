@@ -3,8 +3,8 @@ import axios from 'axios';
 
 import SearchEngine from "./SearchEngine";
 import CardTall from "./ui/CardTall";
-import CardLarge from "./ui/CardLarge";
-import CardSmall from "./ui/CardSmall";
+// import CardLarge from "./ui/CardLarge";
+// import CardSmall from "./ui/CardSmall";
 
 import classes from './Search.module.css';
 import Logo from "./Logo";
@@ -17,7 +17,7 @@ function Search(props) {
 
     function handleResponse(response) {
         setData(response.data);
-        console.log(response.data[0]);
+        // console.log(response.data[0]);
     }
 
     function handleSetWord(response) {

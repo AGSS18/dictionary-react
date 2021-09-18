@@ -9,7 +9,6 @@ function Results(props) {
                     <h3 className={classes.h3}>Definitions</h3>
                 </div>
                 {props.data[0].meanings.map(function(meaning, index){
-                    console.log(index)
                     index = index + 1;
                     return <div key={index}>
                         <Meaning meaning={meaning} id={index} />
