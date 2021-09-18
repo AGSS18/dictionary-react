@@ -6,12 +6,15 @@ import CardTall from "./ui/CardTall";
 
 import classes from './Search.module.css';
 import Logo from "./Logo";
+import Results from "./Results";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
+    const [data, setData] = useState({});
 
     function handleResponse(response) {
-        console.log(response.data[0]);
+        setData(response.data);
+        console.log(response.data);
     }
 
     function handleSetWord(response) {
@@ -23,12 +26,12 @@ function Search(props) {
         axios.get(apiUrl).then(handleResponse);
     }, [word]);
 
-
     return(
         <CardTall>
             <Logo />
             <SearchEngine handleSetWord={handleSetWord} />
             <h2 className={classes.word}>{word}</h2>
+            <Results data={data}/>
         </CardTall>
     );
 }

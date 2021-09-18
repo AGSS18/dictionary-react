@@ -7,7 +7,7 @@ import Search from './components/Search';
 function App() {
   return (
     <div className="App container">
-      <Search defaultWord="coding"/>
+      <Search defaultWord="code"/>
       <CardSmall>
         Grammar
       </CardSmall>

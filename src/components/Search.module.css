@@ -1,6 +1,7 @@
 .word {
   display: block;
   margin-top: 3.5rem;
+  margin-bottom: 0;
   text-align: start;
   text-transform: capitalize;
   font-size: 4.5rem;
