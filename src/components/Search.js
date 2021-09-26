@@ -3,12 +3,10 @@ import axios from 'axios';
 import Logo from './Logo';
 import SearchEngine from './SearchEngine';
 import Layout from "./layouts/Layout";
-
 import classes from './Search.module.css';
 import Results from './Results';
 import ResultsRight from "./ResultsRight";
-
-
+import Phonetics from "./Phonetics";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -27,19 +25,21 @@ function Search(props) {
         axios.get(apiUrl).then(handleResponse);
     }, [word]);
 
-    console.log(data)
 
-    return(
-            <Layout>
-              <div className={classes["search-engine"]} >
-                 <Logo />
-                 <SearchEngine handleSetWord={handleSetWord} />
-                  <h2 className={classes.word}>{word}</h2>
-                  <Results data={data}/>
-              </div>
-              <ResultsRight data={data} />
-            </Layout>
-    );
+    if(data.length) {
+        return(
+                <Layout>
+                  <div className={classes["search-engine"]} >
+                     <Logo />
+                     <SearchEngine handleSetWord={handleSetWord} />
+                      <h2 className={classes.word}>{word}</h2>
+                      <Phonetics phonetics={data[0].phonetics} />
+                      <Results data={data}/>
+                  </div>
+                  <ResultsRight data={data[0]}/>
+                </Layout>
+        );
+    } else return null
 }
 
 export default Search;

@@ -1,0 +1,23 @@
+.phonetics {
+  text-align: start;
+  margin-left: 1rem;
+  font-size: 1.5rem;
+}
+
+.phonetics,
+.phonetics a {
+  color: #c7c7c7;
+}
+
+.phonetics a {
+  margin-right: 1rem;
+  font-size: 1.2rem;
+  border: 1px solid #c7c7c7;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+
+.phonetics a:hover {
+  color: blue;
+  border: 1px solid blue;
+}
