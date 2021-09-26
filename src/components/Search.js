@@ -1,15 +1,14 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
-
-import SearchEngine from "./SearchEngine";
-import CardTall from "./ui/CardTall";
-// import CardLarge from "./ui/CardLarge";
-// import CardSmall from "./ui/CardSmall";
+import Logo from './Logo';
+import SearchEngine from './SearchEngine';
+import Layout from "./layouts/Layout";
 
 import classes from './Search.module.css';
-import Logo from "./Logo";
-import Results from "./Results";
-import Layout from "./layouts/Layout";
+import Results from './Results';
+import ResultsRight from "./ResultsRight";
+
+
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -17,7 +16,6 @@ function Search(props) {
 
     function handleResponse(response) {
         setData(response.data);
-        // console.log(response.data[0]);
     }
 
     function handleSetWord(response) {
@@ -29,30 +27,18 @@ function Search(props) {
         axios.get(apiUrl).then(handleResponse);
     }, [word]);
 
+    console.log(data)
+
     return(
-        <Layout>
-            <CardTall>
-                <Logo />
-                <SearchEngine handleSetWord={handleSetWord} />
-                <h2 className={classes.word}>{word}</h2>
-                <Results data={data}/>
-            </CardTall>
-            {/* <CardSmall>
-                Grammar
-            </CardSmall>
-            <CardSmall>
-                Examples
-            </CardSmall>
-            <CardLarge>
-                Images
-            </CardLarge>
-            <CardSmall>
-                Pronunciation
-            </CardSmall>
-            <CardSmall>
-                Related words
-            </CardSmall> */}
-        </Layout>
+            <Layout>
+              <div className={classes["search-engine"]} >
+                 <Logo />
+                 <SearchEngine handleSetWord={handleSetWord} />
+                  <h2 className={classes.word}>{word}</h2>
+                  <Results data={data}/>
+              </div>
+              <ResultsRight data={data} />
+            </Layout>
     );
 }
 

@@ -1,11 +1,15 @@
-import classes from './Results.module.css';
+import Definitions from "./Definitions";
 
 function Meaning(props) {
-    return(
-        <p className={classes.p}>{props.id}- {props.meaning.definitions.map(function (definition, index){
-            return definition.definition
-        })} <span style={{fontWeight: 700, textDecoration: "underline"}}>{props.meaning.partOfSpeech}</span></p>
-    );
+    console.log(props);
+     return(
+             props.meaning.definitions.map((definition, index) => {
+                 console.log(definition)
+                 return (
+                     <Definitions key={index} definition={definition.definition} speech={props.meaning.partOfSpeech} />
+                 )
+             })
+     );
 }
 
 export default Meaning;
