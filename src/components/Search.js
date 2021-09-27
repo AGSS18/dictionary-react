@@ -21,7 +21,7 @@ function Search(props) {
     function handlePexelsResponse(response) {
         setTimeout(() => {
             setIsLoading(false);
-        }, 2000);
+        }, 1000);
         setImages(response.data.photos);
     }
 
