@@ -3,7 +3,6 @@ import Meanings from './Meanings';
 
 
 function Results(props) {
-    console.log(props.data[0].meanings.length)
     if(props.data.length) {
         return(
             <div className={classes.results}>

@@ -4,7 +4,7 @@
 }
 
 .form {
-  border-bottom: 1px solid rgb(199, 199, 199);
+  border-bottom: 1px solid #b4b2b2;
   display: flex;
   justify-content: flex-start;
 }
@@ -17,8 +17,8 @@
 }
 
 .form input::placeholder {
-  color: rgb(199, 199, 199);
-  font-weight: 500;
+  color: #b4b2b2;
+  font-weight: 600;
   font-size: 1.5rem;
 }
 
@@ -27,7 +27,7 @@
 }
 
 .icon {
-  color: rgb(199, 199, 199);
+  color: #b4b2b2;
   font-size: 1.5rem;
   margin-right: 0.6rem;
   padding-bottom: 0.4rem;
@@ -41,7 +41,7 @@
 }
 
 [type="search"]::-webkit-search-cancel-button {
-  background-color: rgb(199, 199, 199);
-  color: rgb(199, 199, 199);
-  background-image: rgb(199, 199, 199);
+  background-color: #b4b2b2;
+  color: #b4b2b2;
+  background-image: #b4b2b2;
 }

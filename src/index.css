@@ -59,12 +59,18 @@ h3 {
 }
 
 .margin-top-bottom {
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
   .container {
     width: 95%;
+  }
+}
+
+@media (min-width: 1500px) {
+  .container {
+    width: 40%;
   }
 }
