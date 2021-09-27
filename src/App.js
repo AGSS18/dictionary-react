@@ -3,7 +3,9 @@ import Search from './components/Search';
 
 function App() {
   return (
-      <Search defaultWord="code"/>
+    <div className="container margin-top-bottom">
+      <Search defaultWord="sunset"/>
+    </div>
   );
 }
 

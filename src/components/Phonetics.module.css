@@ -1,6 +1,7 @@
 .phonetics {
   text-align: start;
-  margin-left: 1rem;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
   font-size: 1.5rem;
 }
 
@@ -15,9 +16,10 @@
   border: 1px solid #c7c7c7;
   padding: 0.5rem;
   border-radius: 50%;
+  transition: color 0.2s ease-in-out;
 }
 
 .phonetics a:hover {
-  color: blue;
-  border: 1px solid blue;
+  color: rgb(36, 114, 232);
+  border: 1px solid rgb(36, 114, 232);
 }

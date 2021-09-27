@@ -1,25 +1,24 @@
 import classes from './Results.module.css';
-import Meaning from './Meaning';
+import Phonetics from './Phonetics';
+import Meanings from './Meanings';
 
 
 function Results(props) {
     if(props.data.length) {
         return(
             <div className={classes.results}>
-                <div className={classes.divH3}>
-                    <h3 className={classes.h3}>Definitions</h3>
-                </div>
-                    {props.data[0].meanings.map(function(meaning, index){
-                        index = index + 1;
-                        return <div key={index}>
-                                    <Meaning meaning={meaning} id={index} />
-                                </div>
-                    })}
+                <h2 className={classes.word}>{props.word}</h2>
+                <Phonetics phonetics={props.data[0].phonetics} />
+                {props.data[0].meanings.map((meaning, index) => {
+                    return(
+                        <div key={index}>
+                            <Meanings meaning={meaning} />
+                        </div>
+                    )
+                })}
             </div>
         );
-    } else {
-        return null;
-    }
+    } else return null;
     
 }
 

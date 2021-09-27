@@ -1,12 +1,8 @@
 import { useState, useEffect } from "react";
 import axios from 'axios';
-import Logo from './Logo';
-import SearchEngine from './SearchEngine';
-import Layout from "./layouts/Layout";
 import classes from './Search.module.css';
 import Results from './Results';
-import ResultsRight from "./ResultsRight";
-import Phonetics from "./Phonetics";
+import Header from "./Header";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -28,16 +24,14 @@ function Search(props) {
 
     if(data.length) {
         return(
-                <Layout>
-                  <div className={classes["search-engine"]} >
-                     <Logo />
-                     <SearchEngine handleSetWord={handleSetWord} />
-                      <h2 className={classes.word}>{word}</h2>
-                      <Phonetics phonetics={data[0].phonetics} />
-                      <Results data={data}/>
+                  <div>
+                      <div className={classes["search-engine"]}>
+                        <Header handleSetWord={handleSetWord} />
+                      </div>
+                      <div>
+                        <Results data={data} word={word} />
+                      </div>
                   </div>
-                  <ResultsRight data={data[0]}/>
-                </Layout>
         );
     } else return null
 }

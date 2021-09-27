@@ -1,0 +1,17 @@
+.titles {
+  margin-bottom: 1rem;
+  color: #5a5a5a;
+}
+
+.definitions {
+  font-size: 1.5rem;
+  margin: 0;
+  margin-left: 0.5rem;
+}
+
+.examples {
+  font-size: 1.2rem;
+  margin-left: 1rem;
+  color: rgb(167, 164, 164);
+  margin-top: 0.5rem;
+}

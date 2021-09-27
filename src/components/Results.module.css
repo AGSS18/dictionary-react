@@ -1,5 +1,17 @@
+.word {
+  display: block;
+  margin: 0;
+  text-align: start;
+  text-transform: capitalize;
+  font-size: 4.5rem;
+  color: rgb(90, 90, 90);
+}
+
 .results {
-  margin-top: 5rem;
+  margin-top: 2rem;
+  background-color: #fff;
+  border-radius: 0.5rem;
+  padding: 3rem;
 }
 
 .divH3 {

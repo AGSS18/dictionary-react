@@ -1,8 +1,0 @@
-.Layout {
-  position: relative;
-  height: 100vh;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  column-gap: 0.5rem;
-  padding: 2.5rem 0;
-}

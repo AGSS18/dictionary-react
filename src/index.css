@@ -36,7 +36,7 @@ h3 {
 
 .container {
   max-width: 120rem;
-  width: 80%;
+  width: 50%;
   margin: 0 auto;
 }
 
@@ -56,4 +56,9 @@ h3 {
 
 .text-white {
   color: white;
+}
+
+.margin-top-bottom {
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
