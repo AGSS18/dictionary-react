@@ -23,6 +23,11 @@
   color: rgb(90, 90, 90);
 }
 
+.loader {
+  text-align: center;
+  margin-top: 10rem;
+}
+
 @media (max-width: 768px) {
   .search-engine {
     padding: 0 3rem 3rem;

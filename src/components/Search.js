@@ -5,17 +5,23 @@ import Results from './Results';
 import Header from "./Header";
 import Phonetics from './Phonetics';
 import Images from "./Images";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
     const [data, setData] = useState({});
     const [images, setImages] = useState({});
+    const [isLoading, setIsLoading] = useState(true);
 
     function handleResponse(response) {
         setData(response.data);
     }
 
     function handlePexelsResponse(response) {
+        setTimeout(() => {
+            setIsLoading(false);
+        }, 2000);
         setImages(response.data.photos);
     }
 
@@ -24,6 +30,7 @@ function Search(props) {
     }
     
     useEffect(() => {
+        setIsLoading(true);
         const apiUrl = `https://api.dictionaryapi.dev/api/v2/entries/en/${word}`;
         axios.get(apiUrl).then(handleResponse);
 
@@ -45,8 +52,21 @@ function Search(props) {
                             <h2 className={classes.word}>{word}</h2>
                             <Phonetics phonetics={data[0].phonetics} />
                         </section>
-                        <Images data={images} />
-                        <Results data={data} word={word} />
+                        {isLoading ? 
+                            <div className={classes.loader}>
+                                <Loader
+                                    type="Oval"
+                                    color="#b4b2b2"
+                                    height={100}
+                                    width={100}
+                                />
+                            </div>
+                        :
+                            <section>
+                                <Images data={images} />
+                                <Results data={data} word={word} />
+                            </section>
+                        }
                       </div>
                   </div>
         );
