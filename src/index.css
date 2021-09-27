@@ -12,7 +12,7 @@ html {
 /*GLOBALS*/
 
 body {
-  font-family: sans-serif;
+  font-family: "Roboto", sans-serif;
   margin: 0;
   background: #dfdedf;
 }
@@ -36,7 +36,7 @@ h3 {
 
 .container {
   max-width: 120rem;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
 }
 
@@ -61,4 +61,10 @@ h3 {
 .margin-top-bottom {
   margin-top: 3rem;
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 95%;
+  }
 }

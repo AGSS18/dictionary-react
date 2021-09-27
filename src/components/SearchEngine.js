@@ -7,6 +7,7 @@ function SearchEngine(props) {
 
     function handleSubmit(event) {
         event.preventDefault();
+        setWord("");
         props.handleSetWord(word);
     }
 
@@ -18,7 +19,7 @@ function SearchEngine(props) {
         <div className={classes.SearchEngine}>
             <form onSubmit={handleSubmit} className={classes.form}>
                 <button type="submit" className={classes.icon}><i className={"fas fa-search icon"}></i></button>
-                <input onChange={handleWord} type="search" placeholder="Search Word" />
+                <input onChange={handleWord} type="search" placeholder="Search Word" value={word} />
             </form>
         </div>
     );

@@ -1,12 +1,13 @@
+import classes from './Synonyms.module.css';
+
 function Synonyms(props) {
-    console.log(props.synonyms)
     if(props.synonyms) {
         return(
-            <ul>
+            <ul className={classes.synonyms} >
                 {props.synonyms.map((synonym, index) => {
                     if(index < 5){
                         return (
-                            <li key={index}>{synonym}</li>
+                            <li key={index}>| {synonym} </li>
                         )
                     } else return null
                 })}

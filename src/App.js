@@ -4,7 +4,7 @@ import Search from './components/Search';
 function App() {
   return (
     <div className="container margin-top-bottom">
-      <Search defaultWord="sunset"/>
+      <Search defaultWord="code"/>
     </div>
   );
 }

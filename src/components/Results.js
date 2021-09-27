@@ -1,21 +1,21 @@
 import classes from './Results.module.css';
-import Phonetics from './Phonetics';
 import Meanings from './Meanings';
 
 
 function Results(props) {
+    console.log(props.data[0].meanings.length)
     if(props.data.length) {
         return(
             <div className={classes.results}>
-                <h2 className={classes.word}>{props.word}</h2>
-                <Phonetics phonetics={props.data[0].phonetics} />
-                {props.data[0].meanings.map((meaning, index) => {
-                    return(
-                        <div key={index}>
-                            <Meanings meaning={meaning} />
-                        </div>
-                    )
-                })}
+                <section className={classes["meanings-section"]}>
+                    {props.data[0].meanings.map((meaning, index) => {
+                        return(
+                            <section key={index}>
+                                <Meanings meaning={meaning} />
+                            </section>
+                        )
+                    })}
+                </section>
             </div>
         );
     } else return null;

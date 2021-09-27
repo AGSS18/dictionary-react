@@ -1,0 +1,15 @@
+.synonyms {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 1.1rem;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+.synonyms li {
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+  color: rgb(132, 181, 196);
+  font-weight: 500;
+}

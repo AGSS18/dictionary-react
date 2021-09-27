@@ -3,6 +3,7 @@ import axios from 'axios';
 import classes from './Search.module.css';
 import Results from './Results';
 import Header from "./Header";
+import Phonetics from './Phonetics';
 
 function Search(props) {
     const [word, setWord] = useState(props.defaultWord);
@@ -29,6 +30,10 @@ function Search(props) {
                         <Header handleSetWord={handleSetWord} />
                       </div>
                       <div>
+                        <section className={classes["search-word"]} >
+                            <h2 className={classes.word}>{word}</h2>
+                            <Phonetics phonetics={data[0].phonetics} />
+                        </section>
                         <Results data={data} word={word} />
                       </div>
                   </div>

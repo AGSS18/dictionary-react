@@ -7,7 +7,7 @@ function Meanings(props) {
             <h3 className={classes.titles} >{props.meaning.partOfSpeech}</h3>
             {props.meaning.definitions.map((definition, index) => {
                 index = index + 1;
-                if(index < 4) {
+                if(index < 3) {
                     return (
                         <div key={index}>
                             <p className={classes.definitions} >
@@ -15,7 +15,7 @@ function Meanings(props) {
                             </p>
                             {definition.example && 
                                 <p className={classes.examples} >
-                                        Example: "{definition.example}."
+                                        "{definition.example}."
                                 </p>
                             }
                             <Synonyms synonyms={definition.synonyms} />

@@ -37,6 +37,7 @@
 
 .icon:hover {
   cursor: pointer;
+  color: rgb(145, 143, 143);
 }
 
 [type="search"]::-webkit-search-cancel-button {

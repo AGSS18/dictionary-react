@@ -2,24 +2,25 @@
   text-align: start;
   margin-left: 0.5rem;
   margin-top: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.7rem;
 }
 
-.phonetics,
-.phonetics a {
-  color: #c7c7c7;
+.phonetics {
+  color: #b4b2b2;
+  font-weight: 500;
 }
 
 .phonetics a {
   margin-right: 1rem;
   font-size: 1.2rem;
-  border: 1px solid #c7c7c7;
+  color: rgb(132, 181, 196);
+  border: 1px solid rgb(132, 181, 196);
   padding: 0.5rem;
   border-radius: 50%;
-  transition: color 0.2s ease-in-out;
+  transition: color 0.1s ease-in-out;
 }
 
 .phonetics a:hover {
-  color: rgb(36, 114, 232);
-  border: 1px solid rgb(36, 114, 232);
+  color: #c7c7c7;
+  border: 1px solid #c7c7c7;
 }

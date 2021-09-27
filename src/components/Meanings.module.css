@@ -1,5 +1,13 @@
+.meaning {
+  background-color: #fff;
+  height: 100%;
+  padding: 2.5rem;
+  border-radius: 0.8rem;
+}
+
 .titles {
-  margin-bottom: 1rem;
+  margin: 0 0 1rem;
+  font-size: 3rem;
   color: #5a5a5a;
 }
 
@@ -7,11 +15,21 @@
   font-size: 1.5rem;
   margin: 0;
   margin-left: 0.5rem;
+  font-weight: 700;
+  text-align: justify;
 }
 
 .examples {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   margin-left: 1rem;
-  color: rgb(167, 164, 164);
+  color: #b4b2b2;
   margin-top: 0.5rem;
+  margin-bottom: 0;
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .meaning {
+    padding: 2rem;
+  }
 }
